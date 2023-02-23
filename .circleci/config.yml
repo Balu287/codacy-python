@@ -8,6 +8,10 @@ workflows:
   version: 2
   compile_test_deploy:
     jobs:
+      docker:
+        auth:
+          username: sivbalas  # can specify string literal values
+          password: India@123
       - codacy/checkout_and_version
       - codacy/sbt:
           name: check_scalafmt
